@@ -1,0 +1,331 @@
+phase,workload,description,concurrency,repeat,operation,operation_label,operations,completed_operations,error_operations,share_pct,avg_latency_ms,median_latency_ms,p95_latency_ms,p99_latency_ms,max_latency_ms
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,4,1,point_read,Point read,1455,1455,0,48.5,2.96,2.17,6.88,13.56,58.92
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,4,1,targeted_update,Targeted update,1545,1545,0,51.5,5.88,4.25,13.58,37.28,72.0
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,4,1,point_read,Point read,10039,10039,0,50.2,1.67,1.29,3.76,6.51,44.32
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,4,1,targeted_update,Targeted update,9961,9961,0,49.8,3.32,2.72,6.73,12.06,98.71
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,4,2,point_read,Point read,1475,1475,0,49.17,1.65,1.26,3.58,7.67,26.65
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,4,2,targeted_update,Targeted update,1525,1525,0,50.83,3.21,2.68,5.67,12.25,34.85
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,4,2,point_read,Point read,9959,9959,0,49.8,1.36,1.0,3.07,6.2,31.69
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,4,2,targeted_update,Targeted update,10041,10041,0,50.2,2.76,2.24,5.76,11.42,63.79
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,4,3,point_read,Point read,1513,1513,0,50.43,1.87,1.41,4.6,7.98,41.35
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,4,3,targeted_update,Targeted update,1487,1487,0,49.57,3.74,2.92,8.32,16.7,54.21
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,4,3,point_read,Point read,9968,9968,0,49.84,1.51,1.15,3.53,6.77,23.26
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,4,3,targeted_update,Targeted update,10032,10032,0,50.16,2.97,2.39,6.33,13.76,31.43
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,8,1,point_read,Point read,1418,1418,0,47.27,2.92,2.1,7.35,15.51,40.55
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,8,1,targeted_update,Targeted update,1582,1582,0,52.73,5.73,4.16,14.84,25.83,47.44
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,8,1,point_read,Point read,9899,9899,0,49.49,2.9,1.99,6.52,13.24,300.73
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,8,1,targeted_update,Targeted update,10101,10101,0,50.51,5.56,4.07,13.3,25.13,313.5
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,8,2,point_read,Point read,1515,1515,0,50.5,2.46,2.0,5.35,8.55,30.3
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,8,2,targeted_update,Targeted update,1485,1485,0,49.5,5.03,4.06,10.69,23.34,33.6
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,8,2,point_read,Point read,10149,10149,0,50.74,3.5,2.64,8.45,16.85,71.39
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,8,2,targeted_update,Targeted update,9851,9851,0,49.25,7.0,5.39,16.35,31.25,84.74
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,8,3,point_read,Point read,1434,1434,0,47.8,3.66,2.5,9.73,19.02,69.79
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,8,3,targeted_update,Targeted update,1566,1566,0,52.2,7.57,5.35,20.4,36.36,67.39
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,8,3,point_read,Point read,9948,9948,0,49.74,3.32,2.39,8.17,17.29,116.37
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,8,3,targeted_update,Targeted update,10052,10052,0,50.26,6.83,4.89,16.49,34.65,276.22
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,16,1,point_read,Point read,1536,1536,0,51.2,4.06,3.3,8.79,15.02,30.45
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,16,1,targeted_update,Targeted update,1464,1464,0,48.8,7.24,6.1,16.02,22.45,33.37
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,16,1,point_read,Point read,10133,10133,0,50.67,3.74,3.13,7.75,13.19,49.92
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,16,1,targeted_update,Targeted update,9867,9867,0,49.34,7.09,5.97,14.36,27.27,69.04
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,16,2,point_read,Point read,1494,1494,0,49.8,4.73,3.78,10.63,18.3,35.64
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,16,2,targeted_update,Targeted update,1506,1506,0,50.2,9.49,7.22,23.16,39.59,51.89
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,16,2,point_read,Point read,10133,10133,0,50.67,4.42,3.5,10.19,17.94,69.25
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,16,2,targeted_update,Targeted update,9867,9867,0,49.34,8.47,6.11,21.02,42.45,124.5
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,16,3,point_read,Point read,1462,1462,0,48.73,6.35,5.06,14.48,31.12,57.27
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,16,3,targeted_update,Targeted update,1538,1538,0,51.27,12.07,9.4,25.99,54.11,102.04
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,16,3,point_read,Point read,9967,9967,0,49.84,5.18,4.03,12.35,21.59,58.23
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,16,3,targeted_update,Targeted update,10033,10033,0,50.17,9.82,7.65,23.69,39.49,108.58
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,32,1,point_read,Point read,1478,1478,0,49.27,12.12,8.82,27.27,54.42,299.55
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,32,1,targeted_update,Targeted update,1522,1522,0,50.73,17.04,13.63,38.73,66.71,231.02
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,32,1,point_read,Point read,9863,9863,0,49.31,8.11,6.9,17.9,26.61,73.81
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,32,1,targeted_update,Targeted update,10137,10137,0,50.69,11.69,10.25,23.67,35.95,69.56
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,32,2,point_read,Point read,1500,1500,0,50.0,9.43,7.78,20.19,35.5,62.3
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,32,2,targeted_update,Targeted update,1500,1500,0,50.0,14.81,13.15,29.95,56.58,75.78
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,32,2,point_read,Point read,10015,10015,0,50.08,8.66,7.25,19.35,29.56,65.13
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,32,2,targeted_update,Targeted update,9985,9985,0,49.93,12.55,10.63,26.29,43.58,88.53
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,32,3,point_read,Point read,1469,1469,0,48.97,10.03,8.35,22.73,31.53,47.24
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,32,3,targeted_update,Targeted update,1531,1531,0,51.03,15.79,14.2,32.79,43.66,64.78
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,32,3,point_read,Point read,10051,10051,0,50.26,9.75,8.06,22.55,33.41,114.13
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,32,3,targeted_update,Targeted update,9949,9949,0,49.74,15.35,12.68,34.82,50.89,135.61
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,64,1,point_read,Point read,1547,1547,0,51.57,17.33,12.5,39.36,65.5,556.9
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,64,1,targeted_update,Targeted update,1453,1453,0,48.43,24.71,18.54,52.07,76.23,556.9
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,64,1,point_read,Point read,10112,10112,0,50.56,18.17,14.1,45.44,81.4,281.42
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,64,1,targeted_update,Targeted update,9888,9888,0,49.44,23.99,17.4,64.38,124.38,294.04
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,64,2,point_read,Point read,1522,1522,0,50.73,14.81,12.28,34.81,48.0,64.38
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,64,2,targeted_update,Targeted update,1478,1478,0,49.27,17.46,14.72,40.25,58.16,83.86
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,64,2,point_read,Point read,10019,10019,0,50.09,28.82,22.7,72.3,124.31,282.48
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,64,2,targeted_update,Targeted update,9981,9981,0,49.91,42.41,34.84,101.27,173.8,321.6
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,64,3,point_read,Point read,1488,1488,0,49.6,27.08,21.63,71.94,104.75,140.62
+warmup,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,64,3,targeted_update,Targeted update,1512,1512,0,50.4,33.45,26.31,85.95,112.52,151.33
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,64,3,point_read,Point read,9870,9870,0,49.35,23.04,18.29,56.64,100.5,181.13
+measure,a_balanced,Classic A profile: 50% point reads and 50% targeted updates.,64,3,targeted_update,Targeted update,10130,10130,0,50.65,32.31,27.03,74.18,127.83,241.84
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,4,1,point_read,Point read,2871,2871,0,95.7,1.72,1.36,3.95,6.53,10.09
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,4,1,targeted_update,Targeted update,129,129,0,4.3,3.55,3.12,6.79,8.82,10.21
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,4,1,point_read,Point read,19001,19001,0,95.0,1.28,1.04,2.71,4.45,17.7
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,4,1,targeted_update,Targeted update,999,999,0,5.0,3.03,2.65,5.64,9.83,24.16
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,4,2,point_read,Point read,2852,2852,0,95.07,1.14,0.96,2.14,3.39,11.56
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,4,2,targeted_update,Targeted update,148,148,0,4.93,2.9,2.55,4.33,12.72,19.24
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,4,2,point_read,Point read,19030,19030,0,95.15,1.37,1.08,3.0,4.87,30.76
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,4,2,targeted_update,Targeted update,970,970,0,4.85,3.45,2.83,6.33,15.63,46.71
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,4,3,point_read,Point read,2849,2849,0,94.97,1.74,1.44,3.79,6.26,15.88
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,4,3,targeted_update,Targeted update,151,151,0,5.03,3.87,3.55,7.04,9.32,12.05
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,4,3,point_read,Point read,18978,18978,0,94.89,1.11,0.92,2.18,3.57,30.1
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,4,3,targeted_update,Targeted update,1022,1022,0,5.11,3.21,2.43,4.74,7.89,150.49
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,8,1,point_read,Point read,2841,2841,0,94.7,1.87,1.68,3.32,4.83,10.44
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,8,1,targeted_update,Targeted update,159,159,0,5.3,3.96,3.62,6.48,9.45,9.81
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,8,1,point_read,Point read,18966,18966,0,94.83,2.12,1.75,4.44,7.82,55.87
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,8,1,targeted_update,Targeted update,1034,1034,0,5.17,4.26,3.53,8.05,15.02,57.65
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,8,2,point_read,Point read,2867,2867,0,95.57,1.62,1.41,2.72,6.3,21.49
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,8,2,targeted_update,Targeted update,133,133,0,4.43,3.08,2.82,4.78,6.99,15.04
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,8,2,point_read,Point read,19034,19034,0,95.17,1.97,1.64,3.87,7.49,29.17
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,8,2,targeted_update,Targeted update,966,966,0,4.83,3.92,3.28,6.78,13.55,101.97
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,8,3,point_read,Point read,2841,2841,0,94.7,2.16,1.88,4.09,5.59,26.08
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,8,3,targeted_update,Targeted update,159,159,0,5.3,4.49,3.92,7.32,16.84,28.36
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,8,3,point_read,Point read,19049,19049,0,95.25,2.2,1.7,5.17,9.31,24.45
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,8,3,targeted_update,Targeted update,951,951,0,4.75,4.46,3.5,10.36,15.29,28.26
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,16,1,point_read,Point read,2856,2856,0,95.2,3.42,2.96,7.08,9.64,26.99
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,16,1,targeted_update,Targeted update,144,144,0,4.8,5.09,4.56,8.75,13.99,16.17
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,16,1,point_read,Point read,19019,19019,0,95.09,3.89,3.33,8.2,12.65,33.19
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,16,1,targeted_update,Targeted update,981,981,0,4.91,6.09,5.19,12.62,19.06,26.98
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,16,2,point_read,Point read,2843,2843,0,94.77,7.48,6.21,17.95,25.13,38.32
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,16,2,targeted_update,Targeted update,157,157,0,5.23,13.03,10.65,31.27,40.32,50.05
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,16,2,point_read,Point read,18958,18958,0,94.79,4.63,3.97,9.63,14.89,56.33
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,16,2,targeted_update,Targeted update,1042,1042,0,5.21,7.36,6.45,14.44,20.83,61.13
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,16,3,point_read,Point read,2865,2865,0,95.5,5.68,4.72,12.1,21.78,38.96
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,16,3,targeted_update,Targeted update,135,135,0,4.5,10.19,7.68,20.42,63.38,75.06
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,16,3,point_read,Point read,19026,19026,0,95.13,3.92,3.37,7.96,13.33,34.27
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,16,3,targeted_update,Targeted update,974,974,0,4.87,6.36,5.25,13.03,29.11,48.08
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,32,1,point_read,Point read,2843,2843,0,94.77,7.19,6.47,14.58,19.58,30.56
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,32,1,targeted_update,Targeted update,157,157,0,5.23,9.6,8.49,18.98,23.51,27.66
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,32,1,point_read,Point read,18953,18953,0,94.77,7.37,6.34,16.15,24.6,54.87
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,32,1,targeted_update,Targeted update,1047,1047,0,5.24,9.3,8.19,18.85,24.11,42.52
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,32,2,point_read,Point read,2861,2861,0,95.37,7.8,6.43,16.05,33.11,91.22
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,32,2,targeted_update,Targeted update,139,139,0,4.63,11.55,9.0,24.41,66.71,73.08
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,32,2,point_read,Point read,18959,18959,0,94.8,8.0,6.74,17.21,24.85,158.72
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,32,2,targeted_update,Targeted update,1041,1041,0,5.21,10.43,8.76,20.97,32.08,151.69
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,32,3,point_read,Point read,2860,2860,0,95.33,10.93,9.42,24.61,39.23,57.2
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,32,3,targeted_update,Targeted update,140,140,0,4.67,15.0,12.99,34.31,41.88,51.57
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,32,3,point_read,Point read,18966,18966,0,94.83,8.31,7.25,17.97,24.69,47.52
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,32,3,targeted_update,Targeted update,1034,1034,0,5.17,10.71,9.49,21.45,30.5,46.01
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,64,1,point_read,Point read,2845,2845,0,94.83,11.68,9.88,27.24,40.09,83.83
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,64,1,targeted_update,Targeted update,155,155,0,5.17,13.45,11.12,31.74,42.31,46.9
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,64,1,point_read,Point read,19009,19009,0,95.05,18.35,15.19,43.97,64.79,130.85
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,64,1,targeted_update,Targeted update,991,991,0,4.96,21.12,17.53,47.13,72.6,131.29
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,64,2,point_read,Point read,2844,2844,0,94.8,14.11,12.3,31.32,43.26,62.07
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,64,2,targeted_update,Targeted update,156,156,0,5.2,16.45,13.74,37.65,51.19,58.08
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,64,2,point_read,Point read,19049,19049,0,95.25,12.55,11.2,26.44,35.45,59.74
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,64,2,targeted_update,Targeted update,951,951,0,4.75,13.49,12.29,26.26,35.81,53.5
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,64,3,point_read,Point read,2849,2849,0,94.97,10.1,8.68,21.37,38.87,54.54
+warmup,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,64,3,targeted_update,Targeted update,151,151,0,5.03,11.32,9.64,22.08,43.26,64.17
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,64,3,point_read,Point read,18959,18959,0,94.8,14.17,11.95,32.71,48.92,87.78
+measure,b_read_heavy,Classic B profile: 95% point reads and 5% targeted updates.,64,3,targeted_update,Targeted update,1041,1041,0,5.21,16.33,13.64,38.18,51.78,110.7
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,4,1,point_read,Point read,1482,1482,0,49.4,1.29,0.91,2.87,7.84,25.84
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,4,1,read_modify_write,Read-modify-write,1518,1518,0,50.6,3.81,3.05,7.25,18.1,53.43
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,4,1,point_read,Point read,10066,10066,0,50.33,1.03,0.82,2.18,3.52,19.96
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,4,1,read_modify_write,Read-modify-write,9934,9934,0,49.67,3.27,2.87,6.1,10.08,23.99
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,4,2,point_read,Point read,1548,1548,0,51.6,1.14,0.89,2.59,4.12,18.86
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,4,2,read_modify_write,Read-modify-write,1452,1452,0,48.4,3.63,3.09,6.93,10.64,40.38
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,4,2,point_read,Point read,10078,10078,0,50.39,1.11,0.87,2.4,4.22,33.14
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,4,2,read_modify_write,Read-modify-write,9922,9922,0,49.61,3.51,3.03,6.42,11.9,38.74
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,4,3,point_read,Point read,1499,1499,0,49.97,0.92,0.73,1.75,2.96,12.82
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,4,3,read_modify_write,Read-modify-write,1501,1501,0,50.03,2.92,2.66,4.98,8.02,20.9
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,4,3,point_read,Point read,9996,9996,0,49.98,0.92,0.75,1.85,3.27,25.47
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,4,3,read_modify_write,Read-modify-write,10004,10004,0,50.02,3.0,2.7,5.12,8.37,39.19
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,8,1,point_read,Point read,1503,1503,0,50.1,2.05,1.71,4.19,5.93,24.85
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,8,1,read_modify_write,Read-modify-write,1497,1497,0,49.9,6.2,5.39,11.52,15.83,55.39
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,8,1,point_read,Point read,10024,10024,0,50.12,1.53,1.34,2.86,4.54,31.91
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,8,1,read_modify_write,Read-modify-write,9976,9976,0,49.88,4.6,4.1,7.78,13.03,50.21
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,8,2,point_read,Point read,1572,1572,0,52.4,2.08,1.75,4.34,6.86,11.0
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,8,2,read_modify_write,Read-modify-write,1428,1428,0,47.6,6.06,5.43,11.12,16.54,25.68
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,8,2,point_read,Point read,9956,9956,0,49.78,1.72,1.43,3.61,6.27,15.78
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,8,2,read_modify_write,Read-modify-write,10044,10044,0,50.22,5.13,4.37,10.29,16.38,36.75
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,8,3,point_read,Point read,1526,1526,0,50.87,2.02,1.67,4.47,6.17,16.49
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,8,3,read_modify_write,Read-modify-write,1474,1474,0,49.13,6.06,5.15,11.58,17.26,22.74
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,8,3,point_read,Point read,9934,9934,0,49.67,2.12,1.77,4.19,6.85,57.25
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,8,3,read_modify_write,Read-modify-write,10066,10066,0,50.33,6.31,5.58,11.09,18.73,76.44
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,16,1,point_read,Point read,1488,1488,0,49.6,3.73,3.23,7.7,11.64,16.96
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,16,1,read_modify_write,Read-modify-write,1512,1512,0,50.4,10.14,9.09,19.02,27.15,35.27
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,16,1,point_read,Point read,10052,10052,0,50.26,3.73,3.09,7.61,14.1,69.01
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,16,1,read_modify_write,Read-modify-write,9948,9948,0,49.74,10.31,8.67,20.22,37.04,106.65
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,16,2,point_read,Point read,1475,1475,0,49.17,4.82,3.8,10.35,20.23,107.9
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,16,2,read_modify_write,Read-modify-write,1525,1525,0,50.83,13.44,11.19,24.63,64.52,113.84
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,16,2,point_read,Point read,9976,9976,0,49.88,4.16,3.49,8.59,13.22,141.44
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,16,2,read_modify_write,Read-modify-write,10024,10024,0,50.12,11.78,9.78,22.65,39.45,229.39
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,16,3,point_read,Point read,1495,1495,0,49.83,5.62,3.92,10.47,32.01,139.56
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,16,3,read_modify_write,Read-modify-write,1505,1505,0,50.17,14.83,11.61,26.3,121.58,156.09
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,16,3,point_read,Point read,9949,9949,0,49.74,4.14,3.42,8.94,15.95,40.02
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,16,3,read_modify_write,Read-modify-write,10051,10051,0,50.26,11.47,9.66,23.86,40.79,90.29
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,32,1,point_read,Point read,1485,1485,0,49.5,8.05,6.81,18.07,26.69,41.38
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,32,1,read_modify_write,Read-modify-write,1515,1515,0,50.5,18.32,15.59,37.68,51.54,76.45
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,32,1,point_read,Point read,10078,10078,0,50.39,9.09,7.69,20.52,30.17,79.91
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,32,1,read_modify_write,Read-modify-write,9922,9922,0,49.61,22.44,19.92,44.53,64.39,125.95
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,32,2,point_read,Point read,1523,1523,0,50.77,8.84,7.53,19.96,28.12,43.1
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,32,2,read_modify_write,Read-modify-write,1477,1477,0,49.23,21.35,19.58,39.37,53.79,70.18
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,32,2,point_read,Point read,10064,10064,0,50.32,9.48,7.82,20.88,34.92,113.67
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,32,2,read_modify_write,Read-modify-write,9936,9936,0,49.68,23.43,20.77,43.71,67.01,188.48
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,32,3,point_read,Point read,1527,1527,0,50.9,6.09,5.5,12.3,17.92,39.67
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,32,3,read_modify_write,Read-modify-write,1473,1473,0,49.1,14.6,13.5,25.57,34.15,50.8
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,32,3,point_read,Point read,9986,9986,0,49.93,7.56,6.38,16.96,23.62,52.53
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,32,3,read_modify_write,Read-modify-write,10014,10014,0,50.07,18.37,16.79,33.67,45.88,79.14
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,64,1,point_read,Point read,1532,1532,0,51.07,14.57,12.4,34.36,47.9,61.73
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,64,1,read_modify_write,Read-modify-write,1468,1468,0,48.93,31.91,30.3,58.42,74.72,91.77
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,64,1,point_read,Point read,10011,10011,0,50.06,21.28,17.23,49.84,93.25,247.82
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,64,1,read_modify_write,Read-modify-write,9989,9989,0,49.95,50.21,42.85,108.06,195.65,372.04
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,64,2,point_read,Point read,1458,1458,0,48.6,20.47,17.31,47.94,65.27,87.02
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,64,2,read_modify_write,Read-modify-write,1542,1542,0,51.4,47.25,43.95,91.1,116.43,166.32
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,64,2,point_read,Point read,9827,9827,0,49.13,16.86,14.01,36.59,62.87,180.06
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,64,2,read_modify_write,Read-modify-write,10173,10173,0,50.87,37.16,31.08,70.97,153.96,253.06
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,64,3,point_read,Point read,1465,1465,0,48.83,12.14,10.35,29.18,37.43,45.83
+warmup,f_read_modify_write,F style profile with read-modify-write transactions.,64,3,read_modify_write,Read-modify-write,1535,1535,0,51.17,25.7,23.66,48.77,61.19,86.92
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,64,3,point_read,Point read,9955,9955,0,49.78,16.67,13.93,36.4,53.07,347.14
+measure,f_read_modify_write,F style profile with read-modify-write transactions.,64,3,read_modify_write,Read-modify-write,10045,10045,0,50.22,37.09,32.7,69.14,97.43,417.69
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,1,faculty_aggregation,Faculty aggregation,138,138,0,4.6,55.84,48.67,88.89,286.61,326.32
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,1,filtered_scan,Filtered scan,468,468,0,15.6,4.09,2.8,10.34,14.82,137.25
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,1,insert,Insert,473,473,0,15.77,5.83,4.03,12.94,27.27,146.82
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,1,point_read,Point read,1310,1310,0,43.67,2.44,1.81,6.11,11.38,19.16
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,1,targeted_update,Targeted update,611,611,0,20.37,5.25,3.65,12.47,25.92,133.66
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,1,faculty_aggregation,Faculty aggregation,1006,1006,0,5.03,48.14,45.57,75.52,95.11,130.46
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,1,filtered_scan,Filtered scan,3036,3036,0,15.18,2.94,2.5,6.37,10.14,37.22
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,1,insert,Insert,2944,2944,0,14.72,4.17,3.42,9.12,15.93,45.45
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,1,point_read,Point read,8918,8918,0,44.59,2.01,1.62,4.7,8.18,35.69
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,1,targeted_update,Targeted update,4096,4096,0,20.48,4.08,3.41,8.55,15.04,41.45
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,2,faculty_aggregation,Faculty aggregation,159,159,0,5.3,61.75,55.87,105.48,150.57,159.79
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,2,filtered_scan,Filtered scan,453,453,0,15.1,4.28,3.52,10.02,17.7,32.01
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,2,insert,Insert,434,434,0,14.47,6.08,4.76,14.07,28.42,38.77
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,2,point_read,Point read,1316,1316,0,43.87,2.82,2.25,6.35,10.95,26.53
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,2,targeted_update,Targeted update,638,638,0,21.27,5.49,4.55,12.86,20.81,30.99
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,2,faculty_aggregation,Faculty aggregation,1022,1022,0,5.11,51.73,47.81,83.59,106.57,148.85
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,2,filtered_scan,Filtered scan,2966,2966,0,14.83,3.03,2.41,7.0,12.55,67.51
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,2,insert,Insert,3057,2134,923,15.29,3.56,2.75,8.54,15.88,68.68
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,2,point_read,Point read,8982,8982,0,44.91,1.92,1.5,4.54,8.56,28.05
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,2,targeted_update,Targeted update,3973,3973,0,19.86,4.04,3.26,9.17,16.33,73.54
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,3,faculty_aggregation,Faculty aggregation,146,146,0,4.87,46.68,41.29,84.4,106.74,121.53
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,3,filtered_scan,Filtered scan,474,474,0,15.8,2.11,1.77,4.66,7.46,12.43
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,3,insert,Insert,435,261,174,14.5,2.55,2.08,5.26,12.01,18.78
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,3,point_read,Point read,1383,1383,0,46.1,1.43,1.15,3.11,4.9,15.89
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,3,targeted_update,Targeted update,562,562,0,18.73,2.92,2.53,5.61,8.3,19.13
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,3,faculty_aggregation,Faculty aggregation,957,957,0,4.78,63.84,57.87,100.09,143.29,563.61
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,3,filtered_scan,Filtered scan,3087,3087,0,15.43,3.78,3.04,8.46,14.51,79.41
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,3,insert,Insert,3003,1815,1188,15.02,4.35,3.37,10.94,18.76,45.15
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,3,point_read,Point read,9045,9045,0,45.23,2.6,1.95,6.35,12.11,197.3
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,4,3,targeted_update,Targeted update,3908,3908,0,19.54,5.18,4.07,12.36,19.48,110.98
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,1,faculty_aggregation,Faculty aggregation,140,140,0,4.67,95.5,86.67,155.41,172.7,174.97
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,1,filtered_scan,Filtered scan,464,464,0,15.47,7.6,5.91,17.55,28.19,36.54
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,1,insert,Insert,433,433,0,14.43,11.15,8.4,28.14,35.07,57.17
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,1,point_read,Point read,1374,1374,0,45.8,5.36,4.16,13.69,21.99,35.42
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,1,targeted_update,Targeted update,589,589,0,19.63,11.21,8.67,26.43,40.23,61.8
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,1,faculty_aggregation,Faculty aggregation,971,971,0,4.86,102.43,93.66,177.04,234.49,302.78
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,1,filtered_scan,Filtered scan,3008,3008,0,15.04,7.17,5.5,16.99,28.18,116.24
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,1,insert,Insert,3053,3053,0,15.27,11.0,8.25,27.12,44.4,123.8
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,1,point_read,Point read,8896,8896,0,44.48,5.25,3.87,13.47,23.6,114.5
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,1,targeted_update,Targeted update,4072,4072,0,20.36,10.64,8.09,26.48,40.11,117.95
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,2,faculty_aggregation,Faculty aggregation,149,149,0,4.97,116.61,105.34,198.03,251.38,270.81
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,2,filtered_scan,Filtered scan,448,448,0,14.93,7.36,5.94,17.16,24.26,51.01
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,2,insert,Insert,440,440,0,14.67,11.61,8.54,31.16,46.37,65.3
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,2,point_read,Point read,1351,1351,0,45.03,5.5,4.15,13.77,26.2,54.04
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,2,targeted_update,Targeted update,612,612,0,20.4,11.09,8.81,25.07,48.05,60.36
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,2,faculty_aggregation,Faculty aggregation,949,949,0,4.75,107.29,98.2,174.47,214.44,430.92
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,2,filtered_scan,Filtered scan,2971,2971,0,14.85,6.85,5.29,15.93,28.51,84.93
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,2,insert,Insert,2964,2964,0,14.82,10.38,8.0,25.13,40.55,116.86
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,2,point_read,Point read,9113,9113,0,45.56,4.97,3.75,12.55,21.75,87.89
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,2,targeted_update,Targeted update,4003,4003,0,20.02,10.32,7.87,24.84,41.64,124.35
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,3,faculty_aggregation,Faculty aggregation,159,159,0,5.3,112.31,109.95,162.96,194.69,206.56
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,3,filtered_scan,Filtered scan,461,461,0,15.37,7.3,5.47,18.74,30.07,66.59
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,3,insert,Insert,460,460,0,15.33,10.76,7.84,24.6,52.81,135.24
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,3,point_read,Point read,1323,1323,0,44.1,5.3,3.76,14.32,28.64,53.88
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,3,targeted_update,Targeted update,597,597,0,19.9,10.11,7.34,26.65,47.39,56.9
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,3,faculty_aggregation,Faculty aggregation,1004,1004,0,5.02,120.76,106.92,205.21,319.65,645.25
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,3,filtered_scan,Filtered scan,3031,3031,0,15.15,7.33,5.68,17.14,28.56,108.34
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,3,insert,Insert,3054,3054,0,15.27,11.31,8.69,26.99,42.96,454.96
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,3,point_read,Point read,8996,8996,0,44.98,5.22,3.93,13.18,21.4,292.43
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,8,3,targeted_update,Targeted update,3915,3915,0,19.57,10.64,8.21,25.98,40.3,114.52
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,1,faculty_aggregation,Faculty aggregation,139,139,0,4.63,183.4,175.45,300.05,327.97,333.16
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,1,filtered_scan,Filtered scan,444,444,0,14.8,13.32,10.54,31.08,45.87,52.38
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,1,insert,Insert,443,443,0,14.77,21.7,17.02,55.47,83.77,125.5
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,1,point_read,Point read,1340,1340,0,44.67,10.16,7.41,26.84,42.45,66.78
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,1,targeted_update,Targeted update,634,634,0,21.13,22.97,17.79,54.92,87.43,154.18
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,1,faculty_aggregation,Faculty aggregation,969,969,0,4.84,235.6,221.01,402.77,488.04,584.07
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,1,filtered_scan,Filtered scan,2953,2953,0,14.77,15.14,11.28,39.81,66.2,140.22
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,1,insert,Insert,2976,2976,0,14.88,26.94,21.81,66.01,104.47,158.6
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,1,point_read,Point read,9156,9156,0,45.78,11.06,8.01,29.64,54.47,155.05
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,1,targeted_update,Targeted update,3946,3946,0,19.73,27.11,21.55,66.53,95.28,162.36
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,2,faculty_aggregation,Faculty aggregation,144,144,0,4.8,255.6,217.89,547.45,649.46,680.19
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,2,filtered_scan,Filtered scan,418,418,0,13.93,14.65,10.89,40.32,58.6,79.18
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,2,insert,Insert,469,469,0,15.63,26.28,20.71,69.61,98.49,128.15
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,2,point_read,Point read,1353,1353,0,45.1,10.22,7.77,26.76,40.62,77.32
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,2,targeted_update,Targeted update,616,616,0,20.53,26.65,20.3,66.12,101.12,127.81
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,2,faculty_aggregation,Faculty aggregation,1048,1048,0,5.24,267.36,249.52,503.28,586.15,656.96
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,2,filtered_scan,Filtered scan,2955,2955,0,14.77,16.45,12.36,43.58,74.04,133.85
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,2,insert,Insert,3008,3008,0,15.04,27.2,21.25,67.5,110.07,167.97
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,2,point_read,Point read,9028,9028,0,45.14,11.19,8.16,30.67,53.82,143.16
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,2,targeted_update,Targeted update,3961,3961,0,19.8,26.99,21.7,65.0,101.14,196.79
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,3,faculty_aggregation,Faculty aggregation,149,149,0,4.97,330.59,283.89,625.92,771.94,810.12
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,3,filtered_scan,Filtered scan,440,440,0,14.67,17.22,13.02,44.27,77.11,121.65
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,3,insert,Insert,458,458,0,15.27,28.2,23.22,65.83,100.64,145.5
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,3,point_read,Point read,1313,1313,0,43.77,12.25,9.07,31.36,50.19,139.71
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,3,targeted_update,Targeted update,640,640,0,21.33,26.74,21.76,64.71,81.59,98.97
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,3,faculty_aggregation,Faculty aggregation,985,985,0,4.92,331.65,288.45,691.59,1058.43,1208.29
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,3,filtered_scan,Filtered scan,2976,2976,0,14.88,17.27,12.06,45.97,81.83,300.84
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,3,insert,Insert,2954,2954,0,14.77,27.02,19.9,72.43,122.49,238.29
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,3,point_read,Point read,9053,9053,0,45.27,11.46,7.76,32.04,59.71,274.56
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,16,3,targeted_update,Targeted update,4032,4032,0,20.16,27.75,20.71,72.09,136.36,278.01
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,1,faculty_aggregation,Faculty aggregation,181,181,0,6.03,755.22,701.49,1536.71,1692.99,1801.38
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,1,filtered_scan,Filtered scan,447,447,0,14.9,43.99,33.58,122.49,205.02,268.97
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,1,insert,Insert,463,463,0,15.43,46.52,34.13,134.43,221.53,255.12
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,1,point_read,Point read,1312,1312,0,43.73,24.87,18.02,70.82,123.08,177.9
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,1,targeted_update,Targeted update,597,597,0,19.9,48.51,35.73,119.87,224.09,296.79
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,1,faculty_aggregation,Faculty aggregation,995,995,0,4.98,638.0,606.37,1118.24,1295.69,1657.52
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,1,filtered_scan,Filtered scan,3021,3021,0,15.1,29.76,23.21,76.12,127.6,295.69
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,1,insert,Insert,2947,2947,0,14.74,52.06,42.41,126.51,184.73,473.01
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,1,point_read,Point read,9013,9013,0,45.06,20.58,14.72,56.7,106.61,275.99
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,1,targeted_update,Targeted update,4024,4024,0,20.12,56.64,46.27,139.95,203.14,322.74
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,2,faculty_aggregation,Faculty aggregation,150,150,0,5.0,663.16,649.69,1152.29,1227.27,1346.47
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,2,filtered_scan,Filtered scan,485,485,0,16.17,28.99,20.75,79.1,127.16,199.64
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,2,insert,Insert,416,416,0,13.87,42.67,31.25,114.58,186.75,288.48
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,2,point_read,Point read,1374,1374,0,45.8,22.78,14.66,66.7,127.07,251.81
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,2,targeted_update,Targeted update,575,575,0,19.17,47.53,38.57,115.25,188.84,319.27
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,2,faculty_aggregation,Faculty aggregation,958,958,0,4.79,678.24,679.95,1047.81,1221.63,1414.79
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,2,filtered_scan,Filtered scan,3096,3096,0,15.48,26.39,20.95,66.0,105.59,190.84
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,2,insert,Insert,3068,3068,0,15.34,38.97,31.47,99.23,150.77,229.31
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,2,point_read,Point read,8926,8926,0,44.63,17.53,12.73,49.1,82.81,230.43
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,2,targeted_update,Targeted update,3952,3952,0,19.76,40.28,32.41,101.86,164.05,251.48
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,3,faculty_aggregation,Faculty aggregation,150,150,0,5.0,686.51,695.38,1136.02,1189.93,1226.39
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,3,filtered_scan,Filtered scan,467,467,0,15.57,23.89,19.1,59.96,93.11,107.69
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,3,insert,Insert,466,466,0,15.53,34.06,25.3,96.33,128.13,171.68
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,3,point_read,Point read,1300,1300,0,43.33,14.95,10.36,45.45,81.69,131.28
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,3,targeted_update,Targeted update,617,617,0,20.57,33.0,25.88,84.97,125.9,164.25
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,3,faculty_aggregation,Faculty aggregation,1003,1003,0,5.01,745.98,742.94,1183.34,1450.83,1982.3
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,3,filtered_scan,Filtered scan,3014,3014,0,15.07,24.01,18.91,63.22,94.1,274.51
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,3,insert,Insert,3001,3001,0,15.0,38.39,29.97,95.38,150.91,407.19
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,3,point_read,Point read,9068,9068,0,45.34,16.64,11.64,47.04,78.26,239.0
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,32,3,targeted_update,Targeted update,3914,3914,0,19.57,38.55,31.56,95.84,139.44,287.82
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,1,faculty_aggregation,Faculty aggregation,153,153,0,5.1,1397.22,1454.79,2196.24,2609.14,2718.38
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,1,filtered_scan,Filtered scan,478,478,0,15.93,57.46,44.37,157.47,216.4,276.26
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,1,insert,Insert,443,443,0,14.77,50.2,37.3,152.05,187.2,268.01
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,1,point_read,Point read,1325,1325,0,44.17,48.68,35.95,147.64,223.03,346.12
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,1,targeted_update,Targeted update,601,601,0,20.03,55.37,46.52,138.47,203.51,256.74
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,1,faculty_aggregation,Faculty aggregation,990,990,0,4.95,3760.36,3774.33,5871.77,6642.08,8744.05
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,1,filtered_scan,Filtered scan,3057,3057,0,15.29,54.48,38.33,153.92,266.68,660.51
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,1,insert,Insert,2971,2971,0,14.85,56.24,41.35,160.77,220.18,398.78
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,1,point_read,Point read,9013,9013,0,45.06,30.09,18.18,94.26,176.19,564.79
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,1,targeted_update,Targeted update,3969,3969,0,19.84,61.33,46.03,166.78,244.09,419.51
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,2,faculty_aggregation,Faculty aggregation,152,152,0,5.07,3460.95,3729.96,4814.76,5073.52,5427.13
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,2,filtered_scan,Filtered scan,459,459,0,15.3,67.88,49.02,186.69,275.34,510.54
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,2,insert,Insert,411,411,0,13.7,53.55,41.05,147.53,191.31,240.77
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,2,point_read,Point read,1363,1363,0,45.43,39.17,22.75,129.31,249.34,416.36
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,2,targeted_update,Targeted update,615,615,0,20.5,57.55,41.51,167.1,223.55,293.24
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,2,faculty_aggregation,Faculty aggregation,980,980,0,4.9,4725.31,4867.58,7206.37,8550.27,9615.6
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,2,filtered_scan,Filtered scan,2951,2951,0,14.75,56.54,39.88,158.44,261.19,549.02
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,2,insert,Insert,2939,2939,0,14.7,62.28,44.73,177.28,260.6,508.03
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,2,point_read,Point read,8995,8995,0,44.98,32.93,20.4,105.9,181.68,525.25
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,2,targeted_update,Targeted update,4135,4135,0,20.67,64.78,46.02,188.55,293.92,628.16
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,3,faculty_aggregation,Faculty aggregation,147,147,0,4.9,3210.1,3085.17,5211.7,5506.03,5620.21
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,3,filtered_scan,Filtered scan,459,459,0,15.3,59.79,41.61,177.38,279.97,396.58
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,3,insert,Insert,470,470,0,15.67,57.42,45.37,152.91,245.39,291.18
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,3,point_read,Point read,1331,1331,0,44.37,40.39,27.58,123.1,214.49,356.07
+warmup,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,3,targeted_update,Targeted update,593,593,0,19.77,65.63,50.13,164.94,293.98,354.93
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,3,faculty_aggregation,Faculty aggregation,985,985,0,4.92,4935.24,4998.12,7716.16,8704.13,9499.7
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,3,filtered_scan,Filtered scan,3041,3041,0,15.2,63.48,42.86,180.76,348.86,625.43
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,3,insert,Insert,2979,2979,0,14.89,59.49,42.75,165.83,264.77,463.04
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,3,point_read,Point read,9071,9071,0,45.36,38.48,22.22,129.7,246.39,866.57
+measure,analytics_mixed,Application-like mixed workload with inserts and scatter-gather analytics.,64,3,targeted_update,Targeted update,3924,3924,0,19.62,59.61,43.44,162.45,241.29,403.74

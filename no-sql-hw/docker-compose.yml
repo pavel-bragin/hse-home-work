@@ -1,0 +1,128 @@
+version: '3.8'
+
+services:
+  cfgsvr1:
+    image: mongo:7.0
+    container_name: cfgsvr1
+    command:
+      - mongod
+      - --configsvr
+      - --replSet
+      - cfgReplSet
+      - --port
+      - "27019"
+      - --bind_ip_all
+    volumes:
+      - cfgsvr1-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--port", "27019", "--eval", "db.adminCommand({ ping: 1 })"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 20s
+
+  shard1a:
+    image: mongo:7.0
+    container_name: shard1a
+    command:
+      - mongod
+      - --shardsvr
+      - --replSet
+      - shard1ReplSet
+      - --port
+      - "27018"
+      - --bind_ip_all
+    volumes:
+      - shard1a-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--port", "27018", "--eval", "db.adminCommand({ ping: 1 })"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 20s
+
+  shard2a:
+    image: mongo:7.0
+    container_name: shard2a
+    command:
+      - mongod
+      - --shardsvr
+      - --replSet
+      - shard2ReplSet
+      - --port
+      - "27018"
+      - --bind_ip_all
+    volumes:
+      - shard2a-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--port", "27018", "--eval", "db.adminCommand({ ping: 1 })"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 20s
+
+  mongos:
+    image: mongo:7.0
+    container_name: mongos
+    ports:
+      - "27017:27017"
+    command:
+      - mongos
+      - --configdb
+      - cfgReplSet/cfgsvr1:27019
+      - --bind_ip_all
+      - --port
+      - "27017"
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--port", "27017", "--eval", "db.adminCommand({ ping: 1 })"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+    depends_on:
+      cfgsvr1:
+        condition: service_healthy
+      shard1a:
+        condition: service_healthy
+      shard2a:
+        condition: service_healthy
+      replset-init:
+        condition: service_completed_successfully
+
+  # === Инициализация replica sets (cfg + shards) ===
+  replset-init:
+    image: mongo:7.0
+    container_name: replset-init
+    depends_on:
+      cfgsvr1:
+        condition: service_healthy
+      shard1a:
+        condition: service_healthy
+      shard2a:
+        condition: service_healthy
+    volumes:
+      - ./scripts:/scripts
+    entrypoint:
+      - /bin/bash
+      - /scripts/init-replsets.sh
+    restart: "no"
+
+  # === Инициализация шардинга (addShard + enableSharding) ===
+  sharding-init:
+    image: mongo:7.0
+    container_name: sharding-init
+    depends_on:
+      mongos:
+        condition: service_healthy
+    volumes:
+      - ./scripts:/scripts
+    entrypoint:
+      - /bin/bash
+      - /scripts/init-sharding.sh
+    restart: "no"
+
+volumes:
+  cfgsvr1-data:
+  shard1a-data:
+  shard2a-data:
