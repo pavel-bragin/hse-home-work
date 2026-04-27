@@ -1,0 +1,470 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "%pyspark\nfrom pyspark.sql.types import (\n    DoubleType, IntegerType, LongType, StringType,\n    StructField, StructType, TimestampType\n)\n\nBUCKET = \"hse-1\"\n\nspark.sql(\"CREATE DATABASE IF NOT EXISTS hw2\")\nspark.sql(\"USE hw2\")\n\ntx_schema = StructType([\n    StructField(\"transaction_id\", LongType(), True),\n    StructField(\"user_id\", LongType(), True),\n    StructField(\"amount\", DoubleType(), True),\n    StructField(\"currency\", StringType(), True),\n    StructField(\"transaction_date\", TimestampType(), True),\n    StructField(\"is_fraud\", IntegerType(), True),\n])\n\nlogs_schema = StructType([\n    StructField(\"log_id\", LongType(), True),\n    StructField(\"transaction_id\", LongType(), True),\n    StructField(\"category\", StringType(), True),\n    StructField(\"comment\", StringType(), True),\n    StructField(\"log_timestamp\", TimestampType(), True),\n])\n\ntx_df = (\n    spark.read\n    .option(\"header\", \"true\")\n    .option(\"sep\", \",\")\n    .schema(tx_schema)\n    .csv(f\"s3a://{BUCKET}/raw/transactions_v2.csv\")\n)\nlogs_df = (\n    spark.read\n    .option(\"header\", \"true\")\n    .option(\"sep\", \";\")\n    .schema(logs_schema)\n    .csv(f\"s3a://{BUCKET}/raw/logs_v2.txt\")\n)\n\n(tx_df.write.mode(\"overwrite\")\n    .format(\"parquet\")\n    .saveAsTable(\"hw2.transactions_v2\"))\n\n(logs_df.write.mode(\"overwrite\")\n    .format(\"parquet\")\n    .saveAsTable(\"hw2.logs_v2\"))\n\nprint(\"transactions_v2 count:\", spark.table(\"hw2.transactions_v2\").count())\nprint(\"logs_v2 count:\", spark.table(\"hw2.logs_v2\").count())",
+      "user": "anonymous",
+      "dateUpdated": "2026-04-26T18:46:16+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "https://ui-c9qi1pq43mrbg5av4vlk-rc1d-dataproc-d-ferg29rrdv9i78me-33841.dataproc-ui.yandexcloud.net/jobs/job?id=3",
+              "$$hashKey": "object:1040"
+            },
+            {
+              "jobUrl": "https://ui-c9qi1pq43mrbg5av4vlk-rc1d-dataproc-d-ferg29rrdv9i78me-33841.dataproc-ui.yandexcloud.net/jobs/job?id=4",
+              "$$hashKey": "object:1041"
+            },
+            {
+              "jobUrl": "https://ui-c9qi1pq43mrbg5av4vlk-rc1d-dataproc-d-ferg29rrdv9i78me-33841.dataproc-ui.yandexcloud.net/jobs/job?id=5",
+              "$$hashKey": "object:1042"
+            },
+            {
+              "jobUrl": "https://ui-c9qi1pq43mrbg5av4vlk-rc1d-dataproc-d-ferg29rrdv9i78me-33841.dataproc-ui.yandexcloud.net/jobs/job?id=6",
+              "$$hashKey": "object:1043"
+            },
+            {
+              "jobUrl": "https://ui-c9qi1pq43mrbg5av4vlk-rc1d-dataproc-d-ferg29rrdv9i78me-33841.dataproc-ui.yandexcloud.net/jobs/job?id=7",
+              "$$hashKey": "object:1044"
+            },
+            {
+              "jobUrl": "https://ui-c9qi1pq43mrbg5av4vlk-rc1d-dataproc-d-ferg29rrdv9i78me-33841.dataproc-ui.yandexcloud.net/jobs/job?id=8",
+              "$$hashKey": "object:1045"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1777228734880_169386169",
+      "id": "paragraph_1777228734880_169386169",
+      "dateCreated": "2026-04-26T18:38:54+0000",
+      "dateStarted": "2026-04-26T18:46:16+0000",
+      "dateFinished": "2026-04-26T18:46:20+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:518",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "transactions_v2 count: 20\nlogs_v2 count: 16\n"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {}
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          },
+          "2": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "is_fraud": "string",
+                      "tx_count": "string",
+                      "total_amount": "string",
+                      "avg_amount": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          },
+          "4": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "tx_day": "string",
+                      "tx_count": "string",
+                      "total_amount": "string",
+                      "avg_amount": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          },
+          "5": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "category": "string",
+                      "log_count": "string",
+                      "uniq_tx": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          },
+          "6": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "day_of_week": "string",
+                      "hour_of_day": "string",
+                      "tx_count": "string",
+                      "total_amount": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          },
+          "8": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "transaction_id": "string",
+                      "user_id": "string",
+                      "amount": "string",
+                      "currency": "string",
+                      "log_count": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          },
+          "10": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "category": "string",
+                      "log_count": "string",
+                      "uniq_tx": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "https://ui-c9qi1pq43mrbg5av4vlk-rc1d-dataproc-d-ferg29rrdv9i78me-33841.dataproc-ui.yandexcloud.net/jobs/job?id=9",
+              "$$hashKey": "object:9146"
+            },
+            {
+              "jobUrl": "https://ui-c9qi1pq43mrbg5av4vlk-rc1d-dataproc-d-ferg29rrdv9i78me-33841.dataproc-ui.yandexcloud.net/jobs/job?id=10",
+              "$$hashKey": "object:9147"
+            },
+            {
+              "jobUrl": "https://ui-c9qi1pq43mrbg5av4vlk-rc1d-dataproc-d-ferg29rrdv9i78me-33841.dataproc-ui.yandexcloud.net/jobs/job?id=11",
+              "$$hashKey": "object:9148"
+            },
+            {
+              "jobUrl": "https://ui-c9qi1pq43mrbg5av4vlk-rc1d-dataproc-d-ferg29rrdv9i78me-33841.dataproc-ui.yandexcloud.net/jobs/job?id=12",
+              "$$hashKey": "object:9149"
+            },
+            {
+              "jobUrl": "https://ui-c9qi1pq43mrbg5av4vlk-rc1d-dataproc-d-ferg29rrdv9i78me-33841.dataproc-ui.yandexcloud.net/jobs/job?id=13",
+              "$$hashKey": "object:9150"
+            },
+            {
+              "jobUrl": "https://ui-c9qi1pq43mrbg5av4vlk-rc1d-dataproc-d-ferg29rrdv9i78me-33841.dataproc-ui.yandexcloud.net/jobs/job?id=14",
+              "$$hashKey": "object:9151"
+            },
+            {
+              "jobUrl": "https://ui-c9qi1pq43mrbg5av4vlk-rc1d-dataproc-d-ferg29rrdv9i78me-33841.dataproc-ui.yandexcloud.net/jobs/job?id=15",
+              "$$hashKey": "object:9152"
+            },
+            {
+              "jobUrl": "https://ui-c9qi1pq43mrbg5av4vlk-rc1d-dataproc-d-ferg29rrdv9i78me-33841.dataproc-ui.yandexcloud.net/jobs/job?id=16",
+              "$$hashKey": "object:9153"
+            },
+            {
+              "jobUrl": "https://ui-c9qi1pq43mrbg5av4vlk-rc1d-dataproc-d-ferg29rrdv9i78me-33841.dataproc-ui.yandexcloud.net/jobs/job?id=18",
+              "$$hashKey": "object:9154"
+            },
+            {
+              "jobUrl": "https://ui-c9qi1pq43mrbg5av4vlk-rc1d-dataproc-d-ferg29rrdv9i78me-33841.dataproc-ui.yandexcloud.net/jobs/job?id=19",
+              "$$hashKey": "object:9155"
+            },
+            {
+              "jobUrl": "https://ui-c9qi1pq43mrbg5av4vlk-rc1d-dataproc-d-ferg29rrdv9i78me-33841.dataproc-ui.yandexcloud.net/jobs/job?id=21",
+              "$$hashKey": "object:9156"
+            },
+            {
+              "jobUrl": "https://ui-c9qi1pq43mrbg5av4vlk-rc1d-dataproc-d-ferg29rrdv9i78me-33841.dataproc-ui.yandexcloud.net/jobs/job?id=22",
+              "$$hashKey": "object:9157"
+            },
+            {
+              "jobUrl": "https://ui-c9qi1pq43mrbg5av4vlk-rc1d-dataproc-d-ferg29rrdv9i78me-33841.dataproc-ui.yandexcloud.net/jobs/job?id=23",
+              "$$hashKey": "object:9158"
+            },
+            {
+              "jobUrl": "https://ui-c9qi1pq43mrbg5av4vlk-rc1d-dataproc-d-ferg29rrdv9i78me-33841.dataproc-ui.yandexcloud.net/jobs/job?id=24",
+              "$$hashKey": "object:9159"
+            },
+            {
+              "jobUrl": "https://ui-c9qi1pq43mrbg5av4vlk-rc1d-dataproc-d-ferg29rrdv9i78me-33841.dataproc-ui.yandexcloud.net/jobs/job?id=25",
+              "$$hashKey": "object:9160"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1777228906807_205077290",
+      "id": "paragraph_1777228906807_205077290",
+      "dateCreated": "2026-04-26T18:41:46+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:593",
+      "text": "%spark.sql\nUSE hw2;\n\n-- 1. Хорошие валюты\nSELECT\n    currency,\n    COUNT(*)              AS tx_count,\n    ROUND(SUM(amount), 2) AS total_amount,\n    ROUND(AVG(amount), 2) AS avg_amount\nFROM transactions_v2\nWHERE currency IN ('USD', 'EUR', 'RUB') AND amount > 0\nGROUP BY currency\nORDER BY total_amount DESC;\n\n-- 2. Fraud vs legit\nSELECT\n    is_fraud,\n    COUNT(*)              AS tx_count,\n    ROUND(SUM(amount), 2) AS total_amount,\n    ROUND(AVG(amount), 2) AS avg_amount\nFROM transactions_v2\nWHERE amount > 0\nGROUP BY is_fraud;\n\n-- 3. Ежедневная динамика\nSELECT\n    CAST(transaction_date AS DATE) AS tx_day,\n    COUNT(*)                       AS tx_count,\n    ROUND(SUM(amount), 2)          AS total_amount,\n    ROUND(AVG(amount), 2)          AS avg_amount\nFROM transactions_v2\nWHERE amount > 0\nGROUP BY CAST(transaction_date AS DATE)\nORDER BY tx_day;\n\n-- 4. Разбивка по дню недели / часу\nSELECT\n    DATE_FORMAT(transaction_date, 'EEEE') AS day_of_week,\n    HOUR(transaction_date)                AS hour_of_day,\n    COUNT(*)                              AS tx_count,\n    ROUND(SUM(amount), 2)                 AS total_amount\nFROM transactions_v2\nWHERE amount > 0\nGROUP BY DATE_FORMAT(transaction_date, 'EEEE'), HOUR(transaction_date)\nORDER BY day_of_week, hour_of_day;\n\n-- 5. Количество логов на транзакцию\nSELECT\n    t.transaction_id,\n    t.user_id,\n    t.amount,\n    t.currency,\n    COUNT(l.log_id) AS log_count\nFROM transactions_v2 t\nLEFT JOIN logs_v2 l ON t.transaction_id = l.transaction_id\nGROUP BY t.transaction_id, t.user_id, t.amount, t.currency\nORDER BY log_count DESC, t.transaction_id;\n\n-- 6. Топ категорий логов (только для валидных транзакций)\nSELECT\n    l.category,\n    COUNT(*)                         AS log_count,\n    COUNT(DISTINCT l.transaction_id) AS uniq_tx\nFROM logs_v2 l\nJOIN transactions_v2 t ON l.transaction_id = t.transaction_id\nWHERE t.amount > 0\nGROUP BY l.category\nORDER BY log_count DESC;\n\n-- 7. Топ пользователей по обороту в «хороших» валютах\nSELECT\n    user_id,\n    COUNT(*)              AS tx_count,\n    ROUND(SUM(amount), 2) AS total_amount\nFROM transactions_v2\nWHERE currency IN ('USD', 'EUR', 'RUB') AND amount > 0\nGROUP BY user_id\nORDER BY total_amount DESC\nLIMIT 10;\n",
+      "dateUpdated": "2026-04-26T18:49:43+0000",
+      "dateFinished": "2026-04-26T18:49:42+0000",
+      "dateStarted": "2026-04-26T18:49:34+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "currency\ttx_count\ttotal_amount\tavg_amount\nUSD\t5\t12298.99\t2459.8\nEUR\t4\t2171.0\t542.75\nRUB\t2\t395.75\t197.88\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "is_fraud\ttx_count\ttotal_amount\tavg_amount\n1\t6\t12270.99\t2045.17\n0\t9\t3663.7\t407.08\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "tx_day\ttx_count\ttotal_amount\tavg_amount\n2023-03-10\t3\t950.5\t316.83\n2023-03-11\t3\t1869.5\t623.17\n2023-03-12\t3\t920.75\t306.92\n2023-03-13\t4\t10743.94\t2685.99\n2023-03-14\t2\t1450.0\t725.0\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "day_of_week\thour_of_day\ttx_count\ttotal_amount\nFriday\t14\t2\t550.5\nFriday\t15\t1\t400.0\nMonday\t9\t4\t10743.94\nSaturday\t9\t2\t1119.5\nSaturday\t10\t1\t750.0\nSunday\t11\t3\t920.75\nTuesday\t10\t2\t1450.0\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "transaction_id\tuser_id\tamount\tcurrency\tlog_count\n10010\t500\t600.0\tUSD\t2\n10001\t500\t250.0\tUSD\t1\n10002\t500\t300.5\tEUR\t1\n10004\t502\t400.0\t???\t1\n10006\t503\t999.0\tUSD\t1\n10007\t504\t0.0\tUSD\t1\n10013\t506\t9999.99\tUSD\t1\n10014\t506\t120.5\tEUR\t1\n10015\t507\t500.0\tGBP\t1\n10019\t509\t1000.0\tEUR\t1\n10020\t509\t-75.5\tRUB\t1\n10003\t501\t-10.0\tUSD\t0\n10005\t501\t120.5\tRUB\t0\n10008\t504\t750.0\tEUR\t0\n10009\t500\t275.25\tRUB\t0\n10011\t505\t45.5\tGBP\t0\n10012\t505\t-25.0\tUSD\t0\n10016\t507\t123.45\t???\t0\n10017\t508\t0.0\tRUB\t0\n10018\t508\t450.0\tUSD\t0\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "category\tlog_count\tuniq_tx\nElectronics\t5\t4\nTravel\t2\t2\nOther\t1\t1\nMisc\t1\t1\nSystem\t1\t1\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "user_id\ttx_count\ttotal_amount\n506\t2\t10120.49\n500\t4\t1425.75\n509\t1\t1000.0\n503\t1\t999.0\n504\t1\t750.0\n508\t1\t450.0\n501\t1\t120.5\n"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2026-04-26T18:45:17+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1777229117949_570653186",
+      "id": "paragraph_1777229117949_570653186",
+      "dateCreated": "2026-04-26T18:45:17+0000",
+      "status": "READY",
+      "focus": true,
+      "$$hashKey": "object:751"
+    }
+  ],
+  "name": "hw-2",
+  "id": "2MQJP9MKR",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.10.1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {
+    "isRunning": false
+  },
+  "path": "/hw-2"
+}
